@@ -19,4 +19,5 @@ python_version = "3.8"
 
 [scripts]
 start="python src/app.py"
-test="pytest --testdox --color=yes"
+test="pytest --testdox --color=yes --tb=no"
+test_with_stack="pytest --testdox --color=yes"
