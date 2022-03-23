@@ -20,7 +20,7 @@ class FamilyStructure:
         return randint(0, 99999999)
 
     def add_member(self, member):
-        if id in member:
+        if "id" in member:
             self._members.append(member)
         else:
             mem = member
@@ -32,10 +32,12 @@ class FamilyStructure:
         pass
 
     def get_member(self, id: int):
-        filtered_members = list(filter(
-            lambda x: x["id"] == id,
-            self._members
-        ))
+        filtered_members = list(
+            filter(
+                lambda x: x["id"] == id,
+                self._members
+            )
+        )
         return filtered_members.pop()
 
 
